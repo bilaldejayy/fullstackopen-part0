@@ -53,10 +53,64 @@ Node.js/Express backend for the Phonebook application ensuring:
    ```
    (or `npm run dev` for development with nodemon)
 
+## Part 4 - Testing the Backend, User Administration, Token Auth
+
+### 2. Blog List Backend (4.1-4.23 + 5.1-5.23)
+
+Advanced Node.js/Express backend including:
+- Modular structure (controllers, models, utils)
+- Unit and Integration testing with Jest & Supertest
+- User administration (bcrypt password hashing)
+- Token-based authentication (JWT)
+- Authenticated operations (creating/deleting blogs)
+- **Part 5 Update:** End-to-End testing support (reset endpoint)
+
+**To run:**
+1. Create a `.env` file in `blog-list-backend/` with:
+   ```
+   MONGODB_URI=your_mongodb_connection_string
+   PORT=3003
+   SECRET=your_jwt_secret_string
+   ```
+2. Start the backend:
+   ```bash
+   cd blog-list-backend
+   npm install
+   npm run dev
+   ```
+   (For Part 5 E2E testing, use `npm run start:test`)
+
+3. Run tests:
+   ```bash
+   npm test
+   ```
+
+### 3. Blog List Frontend (5.1-5.23)
+
+React Frontend (Vite) for the Blog List application:
+- Login functionality (persisted in localStorage)
+- Blog management (Create, Like, Delete)
+- Toggling visibility (Togglable component)
+- Notifications
+- **Testing:**
+  - Unit Tests: Vitest + React Testing Library (`npm test`)
+  - E2E Tests: Playwright (`npx playwright test`)
+
+**To run:**
+1. Ensure backend is running.
+2. Start frontend:
+   ```bash
+   cd bloglist-frontend
+   npm install
+   npm run dev
+   ```
+
 ## Technologies Used
-- React
-- Node.js
-- Express
-- MongoDB
-- Axios
-- Vite
+
+- **React** - Frontend library (Vite)
+- **Node.js & Express** - Backend
+- **MongoDB** - Database
+- **Jest & Supertest** - Backend Testing
+- **Vitest & React Testing Library** - Frontend Unit Testing
+- **Playwright** - End-to-End Testing
+- **Bcrypt & JWT** - Security
